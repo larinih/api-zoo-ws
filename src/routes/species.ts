@@ -44,7 +44,13 @@ speciesRouter.get('/:id', async (req, res) => {
   
 })
 
-speciesRouter.get('/species/habitat/:query', async (req, res) => {
- //TODO
+speciesRouter.get('/habitat/:query',async (req, res) => {
+  const habitat = req.params.query
+  const query = String(habitat)
 })
+
+speciesRouter.get('/single/:scientificName', async (req, res) => {
+  const single = req.params.scientificName
+  const scientificName = String(single)
+})  
 

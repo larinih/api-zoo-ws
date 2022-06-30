@@ -18,4 +18,5 @@ export default class Specimen {
 
   @ManyToOne(() => Cage)
   cage: Cage
+  zookeeper: any
 }

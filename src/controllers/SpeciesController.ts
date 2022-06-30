@@ -27,11 +27,4 @@ export default class SpeciesController {
     return species
   }
   
-  async getSpeciesByHabitat(habitat: string){
-    const species = await this._repo.findOneBy({ habitat })
-    return species
-  }
-
-
-
 }
