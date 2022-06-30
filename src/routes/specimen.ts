@@ -26,7 +26,7 @@ specimenRouter.post('/', async (req, res) => {
     specimen.cage = cage
     specimen.zookeeper = zookeeper
     
-    const savedSpecimen = await specimenCtrl.save(Species)
+    const savedSpecimen = await specimenCtrl.save(new Species)
 
     return res.status(201).json({ specimen: savedSpecimen })
   }

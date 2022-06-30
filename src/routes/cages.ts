@@ -16,7 +16,7 @@ cagesRouter.post('/', async (req, res) => {
     cages.area = area
     cages.zookeepers = zookeepers
 
-    const savedCages = await cagesCtrl.save(Species)
+    const savedCages = await cagesCtrl.save(new Species)
     return res.status(201).json({ cages: savedCages })
   }
 
