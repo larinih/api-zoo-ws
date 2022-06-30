@@ -26,7 +26,7 @@ specimenRouter.post('/', async (req, res) => {
     specimen.cage = cage
     specimen.zookeeper = zookeeper
     
-    const savedSpecimen = await specimenCtrl.save(specimen)
+    const savedSpecimen = await specimenCtrl.save(new Species)
 
     return res.status(201).json({ specimen: savedSpecimen })
   }
@@ -60,8 +60,8 @@ specimenRouter.get('/:zookeeperRegistrationCode', async (req, res) => {
 
 const specimen = await specimenCtrl.findById(id)
 
-if (Specimen) {
-  return res.json({ Specimen })
+if (specimen) {
+  return res.json({ specimen })
 }
 
 return res.status(404).json({ message: 'No species for given id' })
